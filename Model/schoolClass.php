@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-class Class
+class SchoolClass
 {
     private int $id;
     private string $name;

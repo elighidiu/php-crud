@@ -2,10 +2,12 @@
 <!-- this is the view, try to put only simple if's and loops here.
 Anything complex should be calculated in the model -->
 <section>
-    <h4>Hello <?php echo $user->getName()?>,</h4>
+<h2>Choose a category</h2>
+<form action="" method="post">
+    <input type="submit" name="student" value="Students">
+    <input type="submit" name="teacher" value="Teachers">
+    <input type="submit" name="class" value="Classes">
+</form>
 
-    <p><a href="index.php?page=info">To info page</a></p>
-
-    <p>Put your content here.</p>
 </section>
 <?php require 'includes/footer.php'?>
