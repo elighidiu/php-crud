@@ -6,6 +6,18 @@
 - Deployment strategy : `NA`
 - Team challenge : `team of 3`
 
+## General overview
+### Day 1. 
+- [x]	Create the E-R  diagram
+- [x]	Connect to the DB
+- [x]	Create the classes for student, class & teacher
+- [x]	Place the selection on index
+### Day 2. 
+- [ ]	Figure it out how to organize the files: where will the create & edit will be placed?
+- [ ]	Create the necessary controllers & understand how to use them
+- [ ]	Create all the methods needed for the students, class and teacher 
+- [ ]	Create the general overview pages for all 3 entities
+
 ## Learning objectives
 - To be able to connect to a database
 - To be able to write a simple Create, Read, Update & Delete (CRUD) application
