@@ -6,7 +6,7 @@ Anything complex should be calculated in the model -->
 <form action="" method="post">
     <input type="submit" name="student" value="Students">
     <input type="submit" name="teacher" value="Teachers">
-    <input type="submit" name="class" value="Classes">
+    <input type="submit" name="schoolClass" value="Classes">
 </form>
 
 </section>

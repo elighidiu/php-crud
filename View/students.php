@@ -1,5 +1,15 @@
 <!-- this page contains a general overview of all records of the Student entity in a table -->
+<?php 
+require_once '../Model/dbConnection.php';
+require_once '../Model/studentLoader.php';
 
+require_once '../Controller/StudentController.php';
+//require_once '../Controller/TeacherController.php';
+
+$controller = new StudentController();
+$controller->render($_GET, $_POST);
+
+?>
 <h2>Students</h2>
 
 <!-- createStudent.php is where we will add a new entry in db -->

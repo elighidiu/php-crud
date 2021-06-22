@@ -19,7 +19,7 @@
         /**
          * Get the value of schoolClass
          */ 
-        public function getSchoolClass():array
+        public function getSchoolClasses():array
         {
                 return $this->schoolClasses;
         }
@@ -32,12 +32,12 @@
             }
         }
 
-        public function getSchoolClassByName(string $name){
-            foreach($this->schoolClasses as $class) {
-                if($name == $class->getName()){
-                    return $class;
-                }
-            }
-        }
+        // public function getSchoolClassByName(string $name){
+        //     foreach($this->schoolClasses as $class) {
+        //         if($name == $class->getName()){
+        //             return $class;
+        //         }
+        //     }
+        // }
     }
 ?>

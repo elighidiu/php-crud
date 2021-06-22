@@ -6,12 +6,12 @@ error_reporting(E_ALL);
 
 //include all your model files here
 require 'Model/dbConnection.php';
-//include all your controllers here
 
+//include all your controllers here
 require 'Controller/HomepageController.php';
-//require 'Controller/classController.php';
-//require 'Controller/teacherController.php';
-//require 'Controller/studentController.php';
+require 'Controller/schoolClassController.php';
+require 'Controller/teacherController.php';
+require 'Controller/studentController.php';
 
 //you could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
 //this file should never be more than 20 lines of code!

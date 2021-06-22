@@ -14,7 +14,7 @@ class Dbconnection
             $databaseHost = "localhost";
             $databaseUser = "root";
             $databasePassword = "becode";
-            $databaseName = "crud";
+            $databaseName = "school";
 
             $driverOptions = [
                 PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'",

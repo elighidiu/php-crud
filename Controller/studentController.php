@@ -7,8 +7,8 @@ class studentController
     
     public function render(array $GET, array $POST)
     {
-        $studentLoader = new StudentLoader();
-        $students = $studentLoader->getStudents();
+        $studentList = new StudentLoader();
+        $students = $studentList->getStudents();
         
         require 'View/students.php';
     }
