@@ -1,6 +1,6 @@
 <?php
     class SchoolClassLoader {
-        private array $schoolClass=[];
+        private array $schoolClasses=[];
 
         public function __construct() {
             $connection = new Dbconnection();
@@ -11,7 +11,7 @@
             $allClasses = $handle->fetchAll();
     
             foreach ($allClasses as $schoolclass) {
-                array_push($this->schoolClass, new SchoolClass((int)$schoolclass['id'], $schoolclass['name'], $schoolclass['location'], (int)$schoolclass['teacherId']));
+                array_push($this->schoolClasses, new SchoolClass((int)$schoolclass['id'], $schoolclass['name'], $schoolclass['location'], (int)$schoolclass['teacherId']));
             }
     
         }
@@ -21,21 +21,21 @@
          */ 
         public function getSchoolClass():array
         {
-                return $this->schoolClass;
+                return $this->schoolClasses;
         }
 
         public function getSchoolClassById(int $id){
-            foreach($this->schoolClass as $classId) {
-                if($id == $classId->getId()){
-                    return $classId;
+            foreach($this->schoolClasses as $class) {
+                if($id == $class->getId()){
+                    return $class;
                 }
             }
         }
 
         public function getSchoolClassByName(string $name){
-            foreach($this->schoolClass as $className) {
-                if($name == $className->getName()){
-                    return $className;
+            foreach($this->schoolClasses as $class) {
+                if($name == $class->getName()){
+                    return $class;
                 }
             }
         }
