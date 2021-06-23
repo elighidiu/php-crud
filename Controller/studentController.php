@@ -16,7 +16,9 @@ class studentController
             $email = $_POST['email'];
             $classId = $_POST['classId'];
             $studentList->addStudent($name, $email, $classId  );
+            
         }
+        
 
         require 'View/students.php';
 

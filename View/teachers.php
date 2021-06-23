@@ -2,6 +2,17 @@
 
 <h2>Teachers</h2>
 
+<form action="" method="post">
+  
+    <label>Name</label>
+    <input type="text" name="name">
+    <label>Email</label>
+    <input type="text" name="email">
+    <label>Class ID</label>
+    <input type="text" name="classId">
+    <button type="submit" name="save">Add teacher</button>
+</form>
+
 <table>
     <tr>
         <td>Teacher Id</td>

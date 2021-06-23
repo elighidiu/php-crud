@@ -31,12 +31,17 @@
             }
         }
 
-        // public function getTeacherByName(string $name){
-        //     foreach($this->teachers as $teacher){
-        //         if($name == $teacher->getname()){
-        //             return $teacher;
-        //         }
-        //     }
-        // }
+        public function addTeacher($name, $email, $classId){
+            $connection = new Dbconnection();
+            $pdo = $connection->connect();
+
+            $handle=$pdo->prepare('INSERT INTO teacher
+            (classId, name, email)
+            VALUES(:classId, :name, :email);');
+            $handle->bindValue(':classId' , $classId);
+            $handle->bindValue(':name' , $name);
+            $handle->bindValue(':email' , $email);
+            $handle->execute();
+        }
     }
 ?>

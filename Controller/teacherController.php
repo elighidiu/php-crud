@@ -9,6 +9,15 @@ class teacherController
         $teacherLoader = new TeacherLoader();
         $teachers = $teacherLoader->getTeachers();
 
+        if(isset($_POST['name'], $_POST['email'], $_POST['classId'])){
+           
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $classId = $_POST['classId'];
+            $teacherLoader->addTeacher($name, $email, $classId  );
+            
+        }
+
         require 'View/teachers.php'; 
     }
 }

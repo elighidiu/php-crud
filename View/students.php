@@ -2,8 +2,8 @@
 
 <h2>Students</h2>
 
-<!-- createStudent.php is where we will add a new entry in db -->
-<!-- <a href="createStudent.php">Add New Student</a>  -->
+<!-- Form for addig a new student in DB -->
+<!-- !!!!! Must  look into this later ->on page refresh duplicate entries -->
 
 <form action="" method="post">
   
@@ -31,7 +31,7 @@
         echo "<td> {$student->getId()} </td>";
         echo "<td> {$student->getName()} </td>";
 
-        // updateStudent.php is where we will update the selected entry. I will create this page later, togeter with createStudent.php
+        
         echo "<td> <form action='updateStudent.php' method='post'> <button type='submit' name='id' value={$student->getId()}> Update </button></form> </td>";
 
         // not sure if I need the deleteStudent.php page at this point. I will leave it here for later to consider
