@@ -32,12 +32,18 @@
             }
         }
 
-        // public function getSchoolClassByName(string $name){
-        //     foreach($this->schoolClasses as $class) {
-        //         if($name == $class->getName()){
-        //             return $class;
-        //         }
-        //     }
-        // }
+        public function addSchoolClass($name, $location, $teacherId){
+            $connection = new Dbconnection();
+            $pdo = $connection->connect();
+
+            $handle=$pdo->prepare('INSERT INTO class
+            (name, location, teacherId)
+            VALUES(:name, :location, :teacherId);');
+            
+            $handle->bindValue(':name' , $name);
+            $handle->bindValue(':location' , $location);
+            $handle->bindValue(':teacherId' , $teacherId);
+            $handle->execute();
+        }
     }
 ?>

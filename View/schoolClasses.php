@@ -2,9 +2,20 @@
 
 <h2>School Classes</h2>
 
+<form action="" method="post">
+  
+    <label>Name</label>
+    <input type="text" name="name">
+    <label>Location</label>
+    <input type="text" name="location">
+    <label>Teacher ID</label>
+    <input type="text" name="teacherId">
+    <button type="submit" name="save">Save Class</button>
+</form>
+
 <table>
     <tr>
-        <td>Class Name</td>
+        <td>Class Id</td>
         <td>Class Location</td>
         <td>Update</td>
         <td>Delete</td>

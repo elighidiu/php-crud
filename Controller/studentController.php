@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-class studentController
+class StudentController
 {
     //render function with both $_GET and $_POST vars available if it would be needed.
     
