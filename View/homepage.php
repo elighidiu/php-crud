@@ -3,7 +3,7 @@
 Anything complex should be calculated in the model -->
 <section>
 <h2>Choose a category</h2>
-<form action="" method="post">
+<form action="index.php" method="post">
     <input type="submit" name="student" value="Students">
     <input type="submit" name="teacher" value="Teachers">
     <input type="submit" name="schoolClass" value="Classes">

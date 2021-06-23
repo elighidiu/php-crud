@@ -20,8 +20,6 @@ class Student
     }
 
     
-
-
     /**
      * Get the value of id
      */ 
