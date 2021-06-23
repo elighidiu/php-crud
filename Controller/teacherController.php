@@ -9,7 +9,7 @@ class teacherController
         $teacherLoader = new TeacherLoader();
         $teachers = $teacherLoader->getTeachers();
 
-        require 'View/teachers.php'; //TO BE CREATED
+        require 'View/teachers.php'; 
     }
 }
 

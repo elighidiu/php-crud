@@ -10,7 +10,7 @@ class schoolClassController
     $schoolClassLoader = new SchoolClassLoader();
     $schoolClasses = $schoolClassLoader->getSchoolClasses();
 
-    require 'View/schoolClasses.php'; //TO BE CREATED
+    require 'View/schoolClasses.php'; 
     }
 }
 

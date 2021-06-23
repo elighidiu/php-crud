@@ -8,10 +8,10 @@ error_reporting(E_ALL);
 require 'Model/dbConnection.php';
 require 'Model/student.php';
 require 'Model/studentLoader.php';
-//require 'Model/teacher.php';
-//require 'Model/teacherLoader.php';
-//require 'Model/school.php';
-//require 'Model/schoolLoader.php';
+require 'Model/teacher.php';
+require 'Model/teacherLoader.php';
+require 'Model/schoolClass.php';
+require 'Model/schoolClassLoader.php';
 
 
 //include all your controllers here
@@ -30,6 +30,14 @@ if(isset($_GET['page']) && $_GET['page'] === 'info') {
 
 if(isset($_GET['page']) && $_GET['page'] === 'students') {
     $controller = new StudentController();
+}
+
+if(isset($_GET['page']) && $_GET['page'] === 'teachers') {
+    $controller = new teacherController();
+}
+
+if(isset($_GET['page']) && $_GET['page'] === 'schoolClasses') {
+    $controller = new schoolClassController();
 }
 
 
