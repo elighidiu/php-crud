@@ -5,6 +5,17 @@
 <!-- createStudent.php is where we will add a new entry in db -->
 <!-- <a href="createStudent.php">Add New Student</a>  -->
 
+<form action="" method="post">
+  
+    <label>Name</label>
+    <input type="text" name="name">
+    <label>Email</label>
+    <input type="text" name="email">
+    <label>Class ID</label>
+    <input type="text" name="classId">
+    <button type="submit" name="save">Save student</button>
+</form>
+
 <table>
     <tr>
         <td>Student Id</td>

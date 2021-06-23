@@ -12,7 +12,7 @@
             $allStudents = $handle->fetchAll();
 
             foreach($allStudents as $student) {
-                array_push($this->students, new Student((int)$student['id'], $student['name'], $student['email'], (int)$student['classId'], (int)$student['teacherId']));
+                array_push($this->students, new Student((int)$student['id'], $student['name'], $student['email'], (int)$student['classId']));
             }
         }
 
@@ -33,14 +33,19 @@
                 }
             }
         }
-        // public function getStudentByName(string $name)
-        // {
-        //     foreach($this->students as $student){
-        //         if($name == $student->getname()){
-        //             return $student;
-        //         }
-        //     }
-        // }
+        
+        public function addStudent($name, $email, $classId){
+            $connection = new Dbconnection();
+            $pdo = $connection->connect();
+
+            $handle=$pdo->prepare('INSERT INTO student
+            (classId, name, email)
+            VALUES(:classId, :name, :email);');
+            $handle->bindValue(':classId' , $classId);
+            $handle->bindValue(':name' , $name);
+            $handle->bindValue(':email' , $email);
+            $handle->execute();
+        }
         
 
        

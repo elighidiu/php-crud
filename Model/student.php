@@ -7,16 +7,16 @@ class Student
     private string $name;
     private string $email;
     private int $classId;
-    private int $teacherId;
+    //private int $teacherId;
 
 
-    public function __construct(int $id, $name, $email, int $classId, int $teacherId)
+    public function __construct(int $id, $name, $email, int $classId)
     {
         $this->id = $id;
         $this->name = $name;
         $this->email = $email;
         $this->classId = $classId;
-        $this->teacherId = $teacherId;
+        //$this->teacherId = $teacherId;
     }
 
     
@@ -103,20 +103,20 @@ class Student
     /**
      * Get the value of teacherId
      */ 
-    public function getTeacherId()
-    {
-        return $this->teacherId;
-    }
+    // public function getTeacherId()
+    // {
+    //     return $this->teacherId;
+    // }
 
-    /**
-     * Set the value of teacherId
-     *
-     * @return  self
-     */ 
-    public function setTeacherId($teacherId)
-    {
-        $this->teacherId = $teacherId;
+    // /**
+    //  * Set the value of teacherId
+    //  *
+    //  * @return  self
+    //  */ 
+    // public function setTeacherId($teacherId)
+    // {
+    //     $this->teacherId = $teacherId;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 }

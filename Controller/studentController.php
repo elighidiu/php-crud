@@ -10,8 +10,20 @@ class studentController
         $studentList = new StudentLoader();
         $students = $studentList->getStudents();
         
+        if(isset($_POST['name'], $_POST['email'], $_POST['classId'])){
+           
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $classId = $_POST['classId'];
+            $studentList->addStudent($name, $email, $classId  );
+        }
+
         require 'View/students.php';
+
+        
     }
+
+   
 }
 
 ?>
