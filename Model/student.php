@@ -4,7 +4,7 @@ declare(strict_types=1);
 class Student
 {
     private int $id;
-    private string $name;
+    private $name;
     private $email;
     private int $classId;
     //private int $teacherId;

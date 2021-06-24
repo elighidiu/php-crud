@@ -1,4 +1,7 @@
 <!-- this page contains a general overview of all records of the Student entity in a table -->
+<a href="?page=students">Students</a>
+<a href="?page=teachers">Teachers</a>
+<a href="?page=schoolClasses">Classes</a>
 
 <h2>Students</h2>
 
@@ -6,14 +9,7 @@
 <!-- !!!!! Must  look into this later ->on page refresh duplicate entries -->
 
 <form action="" method="post">
-  
-    <label>Name</label>
-    <input type="text" name="name">
-    <label>Email</label>
-    <input type="text" name="email">
-    <label>Class ID</label>
-    <input type="text" name="classId">
-    <button type="submit" name="save">Save student</button>
+    <button type="submit" name="save">Add new student</button>
 </form>
 
 <table>
@@ -23,19 +19,26 @@
         <td>Update</td>
         <td>Delete</td>
     </tr>
- 
-    <?php foreach($students as $student)
-    {
-       
-        echo "<tr>";
-        echo "<td> {$student->getId()} </td>";
-        echo "<td> {$student->getName()} </td>";
 
-        
-        echo "<td> <form action='?page=updatestudent' method='post'> <button type='submit' name='update' value={$student->getId()}> Update </button></form> </td>";
+    <?php foreach ($students as $student) : ?>
 
-        echo "<td> <form action='' method='post'> <button type='submit' name='delete' value={$student->getId()}> Delete </button></form> </td>";
-    }
-    ?>
+
+        <tr>
+            <td><?php echo $student->getId(); ?></td>
+            <td><?php echo $student->getName(); ?></td>
+            
+
+            <td>
+                <form method='post'> <button type='submit' name='update' value="<?php echo $student->getId(); ?>"> Update </button></form>
+            </td>
+
+            <td>
+                <form action='' method='post'>
+                    <button type='submit' name='delete' value="<?php echo $student->getId(); ?>"> Delete </button>
+                </form>
+            </td>
+        </tr>
+
+    <?php endforeach ?>
+
 </table>
-

@@ -1,0 +1,16 @@
+<?php require 'View/includes/header.php'?>
+<section>
+
+<form action="" method="post">
+  
+    <label>Name</label>
+    <input type="text" name="name" value="<?php echo $selectedStudent->getName() ?>">
+    <label>Email</label>
+    <input type="text" name="email" value="<?php echo $selectedStudent->getEmail() ?>">
+    <label>Class ID</label>
+    <input type="text" name="classId" value="<?php echo $selectedStudent->getClassId() ?>">
+    <input type="number" name="Id" hidden value="<?php echo $id ?>">
+    <button type="submit" name="save" >Update student</button>
+</form>
+
+</section>

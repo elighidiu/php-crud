@@ -1,16 +1,13 @@
 <!-- this page contains a general overview of all records of the Student entity in a table -->
+<a href="?page=students">Students</a>
+<a href="?page=teachers">Teachers</a>
+<a href="?page=schoolClasses">Classes</a>
 
 <h2>Teachers</h2>
 
+
 <form action="" method="post">
-  
-    <label>Name</label>
-    <input type="text" name="name">
-    <label>Email</label>
-    <input type="text" name="email">
-    <label>Class ID</label>
-    <input type="text" name="classId">
-    <button type="submit" name="save">Add teacher</button>
+    <button type="submit" name="save">Add new teacher</button>
 </form>
 
 <table>
@@ -21,19 +18,25 @@
         <td>Delete</td>
     </tr>
  
-    <?php foreach($teachers as $teacher)
-    {
-       
-        echo "<tr>";
-        echo "<td> {$teacher->getId()} </td>";
-        echo "<td> {$teacher->getName()} </td>";
+    <?php foreach ($teachers as $teacher) : ?>
 
-        // updateStudent.php is where we will update the selected entry. I will create this page later, togeter with createStudent.php
-        echo "<td> <form action='updateStudent.php' method='post'> <button type='submit' name='id' value={$teacher->getId()}> Update </button></form> </td>";
 
-        // not sure if I need the deleteStudent.php page at this point. I will leave it here for later to consider
-        echo "<td> <form action='deleteStudent.php' method='post'> <button type='submit' name='id' value={$teacher->getId()}> Delete </button></form> </td>";
-    }
-    ?>
+<tr>
+    <td><?php echo $teacher->getId(); ?></td>
+    <td><?php echo $teacher->getName(); ?></td>
+    
+
+    <td>
+        <form method='post'> <button type='submit' name='update' value="<?php echo $teacher->getId(); ?>"> Update </button></form>
+    </td>
+
+    <td>
+        <form action='' method='post'>
+            <button type='submit' name='delete' value="<?php echo $teacher->getId(); ?>"> Delete </button>
+        </form>
+    </td>
+</tr>
+
+<?php endforeach ?>
 </table>
 

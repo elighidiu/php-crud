@@ -28,7 +28,7 @@ if(isset($_GET['page']) && $_GET['page'] === 'info') {
     $controller = new InfoController();
 }
 
-if(isset($_GET['page']) && $_GET['page'] === 'students' || $_GET['page'] === 'updatestudent') {
+if(isset($_GET['page']) && $_GET['page'] === 'students') {
     $controller = new StudentController();
 }
 
