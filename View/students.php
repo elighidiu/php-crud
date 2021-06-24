@@ -32,7 +32,7 @@
         echo "<td> {$student->getName()} </td>";
 
         
-        echo "<td> <form action='updateStudent.php' method='post'> <button type='submit' name='id' value={$student->getId()}> Update </button></form> </td>";
+        echo "<td> <form action='?page=updateStudent.php' method='post'> <button type='submit' name='update' value={$student->getId()}> Update </button></form> </td>";
 
         // not sure if I need the deleteStudent.php page at this point. I will leave it here for later to consider
         echo "<td> <form action='deleteStudent.php' method='post'> <button type='submit' name='id' value={$student->getId()}> Delete </button></form> </td>";

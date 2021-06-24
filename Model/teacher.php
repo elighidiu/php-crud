@@ -4,12 +4,12 @@ declare(strict_types=1);
 class Teacher
 {
     private int $id;
-    private string $name;
-    private string $email;
+    private $name;
+    private $email;
     private int $classId;
 
 
-    public function __construct(int $id, string $name, string $email, int $classId)
+    public function __construct(int $id, $name, $email, int $classId)
     {
         $this->id = $id;
         $this->name = $name;

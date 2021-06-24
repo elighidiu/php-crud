@@ -8,7 +8,7 @@
     <input type="text" name="name">
     <label>Location</label>
     <input type="text" name="location">
-    <label>Teacher ID</label>
+    <label>Class ID</label>
     <input type="text" name="teacherId">
     <button type="submit" name="save">Save Class</button>
 </form>

@@ -17,6 +17,8 @@ class StudentController
             $classId = $_POST['classId'];
             $studentList->addStudent($name, $email, $classId  );
             
+            header('Location: ?page=students');
+            exit;
         }
         
 

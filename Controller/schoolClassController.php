@@ -17,6 +17,8 @@ class SchoolClassController
         $teacherId = $_POST['teacherId'];
         $schoolClassLoader->addSchoolClass($name, $location, $teacherId  );
         
+        header('Location: ?page=schoolClasses');
+        exit;
     }
 
     require 'View/schoolClasses.php'; 

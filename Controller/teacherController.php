@@ -16,6 +16,8 @@ class TeacherController
             $classId = $_POST['classId'];
             $teacherLoader->addTeacher($name, $email, $classId  );
             
+            header('Location: ?page=teachers');
+            exit;
         }
 
         require 'View/teachers.php'; 
