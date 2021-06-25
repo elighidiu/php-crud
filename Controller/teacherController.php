@@ -7,52 +7,55 @@ class TeacherController
     public function render(array $GET, array $POST)
     {
      
-        $teacherLoader = new TeacherLoader();
                        
         if(isset($POST['save'])){
 
             require 'View/teacher/addteacher.php'; 
-        
-        } elseif(isset($POST['delete'])){
-            $id = $POST['delete'];
-            $teacherLoader->deleteTeacher($id);
          
         } elseif(isset($POST['update'])){
+
             $id = intval($POST['update']);
+
+            $teacherLoader = new TeacherLoader();
             $selectedTeacher = $teacherLoader->getTeacherById($id);
+
             require 'View/teacher/updateteacher.php'; 
           
 
-        } else 
+        } else {
         
-            if (isset($POST['save'])) {
+            if (isset($POST['submitupdate'])) {
+            
+            $id = intval($POST['id']);
             $name = $POST['name'];
             $email = $POST['email'];
             $classId = $POST['classId'];
             
+            $teacherLoader = new TeacherLoader();
             $teacherLoader->UpdateTeacher($name, $email, $classId, $id);
-            } elseif (isset($POST['name'], $_POST['email'], $POST['classId'])){
+           
+        } elseif (isset($POST['name'], $_POST['email'], $POST['classId'])){
            
                 $name = $POST['name'];
                 $email = $POST['email'];
                 $classId = $POST['classId'];
+
+                $teacherLoader = new TeacherLoader();
                 $teacherLoader->addTeacher($name, $email, $classId);
                 
-                header('Location: ?page=teachers');
-                exit;
+                
+            } elseif(isset($POST['delete'])){
+                $id = $POST['delete'];
+
+                $teacherLoader = new TeacherLoader();
+                $teacherLoader->deleteTeacher($id);
+
+                
             }
-        
-        if(isset($POST)){
+
+            $teacherLoader = new TeacherLoader();
             $teachers = $teacherLoader->getTeachers();
             require 'View/teachers.php'; 
         }
-
-
-
-
     }
-
-
 }
-
-?>

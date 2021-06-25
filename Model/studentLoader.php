@@ -51,6 +51,7 @@
             $connection = new Dbconnection();
             $pdo = $connection->connect();
 
+            var_dump($id);
             $handle=$pdo->prepare('UPDATE student
             SET classId=:classId, name=:name, email=:email
             WHERE id=:id;

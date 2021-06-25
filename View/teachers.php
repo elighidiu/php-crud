@@ -1,7 +1,4 @@
 <!-- this page contains a general overview of all records of the Student entity in a table -->
-<a href="?page=students">Students</a>
-<a href="?page=teachers">Teachers</a>
-<a href="?page=schoolClasses">Classes</a>
 
 <h2>Teachers</h2>
 

@@ -1,5 +1,8 @@
 <?php require 'View/includes/header.php'?>
 <section>
+<a href="?page=students">Students</a>
+<a href="?page=teachers">Teachers</a>
+<a href="?page=schoolClasses">Classes</a>
 
 <form action="" method="post">
   
@@ -9,8 +12,8 @@
     <input type="text" name="email" value="<?php echo $selectedStudent->getEmail() ?>">
     <label>Class ID</label>
     <input type="text" name="classId" value="<?php echo $selectedStudent->getClassId() ?>">
-    <input type="number" name="Id" hidden value="<?php echo $id ?>">
-    <button type="submit" name="save" >Update student</button>
+    <input type="number" name="id" hidden value="<?php echo $id ?>">
+    <button type="submit" name="submitupdate" >Update student</button>
 </form>
 
 </section>

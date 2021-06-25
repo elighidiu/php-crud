@@ -45,5 +45,30 @@
             $handle->bindValue(':teacherId' , $teacherId);
             $handle->execute();
         }
+        public function UpdateSchoolClass($name, $location, $teacherId, $id){
+            $connection = new Dbconnection();
+            $pdo = $connection->connect();
+
+            $handle=$pdo->prepare('UPDATE class
+            SET teacherId=:teacherId, name=:name, location=:location
+            WHERE id=:id;
+            ');
+            $handle->bindValue(':teacherId' , $teacherId);
+            $handle->bindValue(':name' , $name);
+            $handle->bindValue(':location' , $location);
+            $handle->bindValue(':id' , $id);
+            $handle->execute();
+        }
+        
+        public function deleteSchoolClass($id){
+            $connection = new Dbconnection();
+            $pdo = $connection->connect();
+
+            $handle=$pdo->prepare('DELETE FROM class
+            WHERE id=:id;
+            ');
+            $handle->bindValue(':id' , $id);
+            $handle->execute();
+        }
     }
 ?>

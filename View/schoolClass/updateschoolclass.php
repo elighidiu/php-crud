@@ -7,13 +7,13 @@
 <form action="" method="post">
   
     <label>Name</label>
-    <input type="text" name="name" value="<?php echo $selectedTeacher->getName() ?>">
+    <input type="text" name="name" value="<?php echo $selectedSchoolClass->getName() ?>">
     <label>Email</label>
-    <input type="text" name="email" value="<?php echo $selectedTeacher->getEmail() ?>">
+    <input type="text" name="location" value="<?php echo $selectedSchoolClass->getLocation() ?>">
     <label>Class ID</label>
-    <input type="text" name="classId" value="<?php echo $selectedTeacher->getClassId() ?>">
+    <input type="text" name="teacherId" value="<?php echo $selectedSchoolClass->getTeacherId() ?>">
     <input type="number" name="id" hidden value="<?php echo $id ?>">
-    <button type="submit" name="submitupdate" >Update teacher</button>
+    <button type="submit" name="submitupdate" >Update Class</button>
 </form>
 
 </section>

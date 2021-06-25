@@ -1,19 +1,8 @@
 <!-- this page contains a general overview of all records of the Student entity in a table -->
-<a href="?page=students">Students</a>
-<a href="?page=teachers">Teachers</a>
-<a href="?page=schoolClasses">Classes</a>
-
 <h2>School Classes</h2>
 
 <form action="" method="post">
-  
-    <label>Name</label>
-    <input type="text" name="name">
-    <label>Location</label>
-    <input type="text" name="location">
-    <label>Class ID</label>
-    <input type="text" name="teacherId">
-    <button type="submit" name="save">Save Class</button>
+    <button type="submit" name="save">Add new class</button>
 </form>
 
 <table>
@@ -24,19 +13,25 @@
         <td>Delete</td>
     </tr>
  
-    <?php foreach($schoolClasses as $schoolClass)
-    {
-       
-        echo "<tr>";
-        echo "<td> {$schoolClass->getId()} </td>";
-        echo "<td> {$schoolClass->getLocation()} </td>";
+    <?php foreach ($schoolClasses as $schoolClass) : ?>
 
-        // updateStudent.php is where we will update the selected entry. I will create this page later, togeter with createStudent.php
-        echo "<td> <form action='updateStudent.php' method='post'> <button type='submit' name='id' value={$schoolClass->getId()}> Update </button></form> </td>";
 
-        // not sure if I need the deleteStudent.php page at this point. I will leave it here for later to consider
-        echo "<td> <form action='deleteStudent.php' method='post'> <button type='submit' name='id' value={$schoolClass->getId()}> Delete </button></form> </td>";
-    }
-    ?>
+<tr>
+    <td><?php echo $schoolClass->getId(); ?></td>
+    <td><?php echo $schoolClass->getName(); ?></td>
+    
+
+    <td>
+        <form method='post'> <button type='submit' name='update' value="<?php echo $schoolClass->getId(); ?>"> Update </button></form>
+    </td>
+
+    <td>
+        <form action='' method='post'>
+            <button type='submit' name='delete' value="<?php echo $schoolClass->getId(); ?>"> Delete </button>
+        </form>
+    </td>
+</tr>
+
+<?php endforeach ?>
 </table>
 
