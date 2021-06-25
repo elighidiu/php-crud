@@ -10,6 +10,9 @@ class StudentController
     {
 
         // if($GET['page'] === 'students') {
+
+            $schoolClassLoader = new SchoolClassLoader();
+            $schoolClasses = $schoolClassLoader->getSchoolClasses();
     
         if (isset($POST['save'])) {
 
@@ -50,6 +53,7 @@ class StudentController
                     $studentList->deleteStudent($id);
             }
 
+            
             $studentList = new StudentLoader();
             $students = $studentList->getStudents();
 

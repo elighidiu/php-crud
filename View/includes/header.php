@@ -10,4 +10,7 @@
 <body>
     <header>
         <h1>Welcome to my site</h1>
+        <p><a href="?page=students">Students</a>
+<a href="?page=teachers">Teachers</a>
+<a href="?page=schoolClasses">Classes</a></p>
     </header>

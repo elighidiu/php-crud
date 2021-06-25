@@ -8,9 +8,9 @@ Anything complex should be calculated in the model -->
     <input type="submit" name="teacher" value="Teachers">
     <input type="submit" name="schoolClass" value="Classes">
 </form> -->
-<a href="?page=students">Students</a>
+<!-- <a href="?page=students">Students</a>
 <a href="?page=teachers">Teachers</a>
-<a href="?page=schoolClasses">Classes</a>
+<a href="?page=schoolClasses">Classes</a> -->
 
 </section>
 <?php require 'includes/footer.php'?>

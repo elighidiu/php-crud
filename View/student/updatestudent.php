@@ -1,8 +1,6 @@
-<?php require 'View/includes/header.php'?>
+<?php require 'View/includes/header.php' ?>
 <section>
-<a href="?page=students">Students</a>
-<a href="?page=teachers">Teachers</a>
-<a href="?page=schoolClasses">Classes</a>
+
 
 <form action="" method="post">
   
